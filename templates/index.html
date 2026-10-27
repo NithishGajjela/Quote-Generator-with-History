@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f5f3ee">
+    <title>Quote of the Moment</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
+  </head>
+  <body>
+    <main class="page-shell">
+      <header class="site-header">
+        <a class="brand" href="/" aria-label="Quote of the Moment home">
+          <span class="brand-mark" aria-hidden="true">q.</span>
+          <span>little reminders</span>
+        </a>
+        <span class="header-note">A moment for your mind</span>
+      </header>
+
+      <section class="hero" aria-labelledby="page-title">
+        <p class="eyebrow"><span class="eyebrow-line"></span> A LITTLE INSPIRATION <span class="eyebrow-line"></span></p>
+        <h1 id="page-title">Quote of the <em>Moment</em></h1>
+        <p class="intro">Pause for a breath. Take a thought with you.</p>
+
+        <article class="quote-card" aria-live="polite" aria-atomic="true">
+          <span class="quote-mark" aria-hidden="true">“</span>
+          <p id="quote-text" class="quote-text">Your next little reminder is just a moment away.</p>
+          <p id="quote-author" class="quote-author">— <span>Whenever you're ready</span></p>
+          <div class="card-footer">
+            <span class="source-label"><span class="source-dot"></span> A thought to keep</span>
+            <span class="card-flourish" aria-hidden="true">✳</span>
+          </div>
+        </article>
+
+        <button id="new-quote-button" class="new-quote-button" type="button">
+          <span class="button-icon" aria-hidden="true">↗</span>
+          <span class="button-label">New Quote</span>
+        </button>
+        <p id="quote-error" class="message error-message" role="alert" hidden></p>
+      </section>
+
+      <section class="history-section" aria-labelledby="history-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow section-eyebrow">YOUR COLLECTION</p>
+            <h2 id="history-title">Words to return to</h2>
+          </div>
+          <span id="history-count" class="history-count">0 saved</span>
+        </div>
+        <p id="history-error" class="message history-error" role="alert" hidden></p>
+        <p id="history-empty" class="history-empty">Your saved quotes will find a home here.</p>
+        <ol id="history-list" class="history-list" aria-live="polite"></ol>
+      </section>
+
+      <footer class="site-footer">
+        <span>Made for a slower moment</span>
+        <span class="footer-sparkle" aria-hidden="true">✳</span>
+      </footer>
+    </main>
+  </body>
+</html>
